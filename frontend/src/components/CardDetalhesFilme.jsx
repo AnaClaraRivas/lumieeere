@@ -21,7 +21,7 @@ const Estrelas = ({ rating = 5 }) => (
 );
 
 export default function CardDetalhesFilme({
-  id_obras,   // 👈 recebemos o id da obra
+  id_obras,   
   capa,
   titulo,
   diretor,
@@ -48,17 +48,16 @@ export default function CardDetalhesFilme({
           <p><strong>Diretor:</strong> {diretor}</p>
           <p><strong>Ano de lançamento:</strong> {ano}</p>
 
-          {/* 👇 Link para a página Rapida, enviando o id_obras junto */}
           <Link
             to="/rapida"
             state={{
               dados: {
-                id_obras,   // 👈 ESSENCIAL
+                id_obras,  
                 titulo,
                 capa
               }
             }}
-            className="btn btn-primary mt-3"
+            className="livro-btn-obras"
           >
             Avaliar este filme
           </Link>

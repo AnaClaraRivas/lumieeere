@@ -11,6 +11,11 @@
 
 }
 
+.livro-btn-obras{
+  text-decoration: none;
+  color: #0B2239;
+}
+
 .capa-livro {
     width: 80%;
     border-radius: 12px;

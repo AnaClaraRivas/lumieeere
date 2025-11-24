@@ -3,7 +3,7 @@ import Card from "./Card";
 
 // imgs
 import capaPrincipe from "../assets/img/capa-pequeno-principe.jpg";
-import capaAcaba from "../assets/img/capa-e-assim-que-acaba.jpg";
+import capaAcaba from "../assets/img/eassim.png";
 import capaBreaking from "../assets/img/capa-breaking-bad.jpg";
 
 function CardContainer() {
@@ -18,14 +18,14 @@ function CardContainer() {
     {
       img: capaAcaba,
       titulo: "É Assim Que Acaba",
-      categoria: "Livro",
+      categoria: "Filme",
       estrelas: "★★★★★",
       descricao: "É uma obra-prima e encantadora, mas cheia de significados profundos. A narrativa é leve."
     },
     {
       img: capaBreaking,
       titulo: "Breaking Bad",
-      categoria: "Livro",
+      categoria: "Série",
       estrelas: "★★★★★",
       descricao: "É uma obra-prima e encantadora, mas cheia de significados profundos. A narrativa é leve."
     }
