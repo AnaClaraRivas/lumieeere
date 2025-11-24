@@ -6,27 +6,27 @@ import Footer from "./components/Footer";
 import "./ObrasLivros.css";
 
 function ObrasSeries() {
- const [obras, setObras] = useState([]);
-     const [pesquisa, setPesquisa] = useState("");
- 
-    useEffect(() => {
-      const carregarObras = async () => {
-        try {
-          const resposta = await fetch("http://localhost/backlumiere/obras/listarseries.php");
-          const dados = await resposta.json();
-          setObras(dados);
-        } catch (erro) {
-          console.log("Erro ao carregar obras:", erro);
-        }
-      };
-      carregarObras();
-    }, []);
+  const [obras, setObras] = useState([]);
+  const [pesquisa, setPesquisa] = useState("");
 
- 
-   const obrasFiltradas = obras.filter((obra) =>
-     obra.titulo.toLowerCase().includes(pesquisa.toLowerCase())
-   );
- 
+  useEffect(() => {
+    const carregarObras = async () => {
+      try {
+        const resposta = await fetch("http://localhost/backlumiere/obras/listarseries.php");
+        const dados = await resposta.json();
+        setObras(dados);
+      } catch (erro) {
+        console.log("Erro ao carregar obras:", erro);
+      }
+    };
+    carregarObras();
+  }, []);
+
+
+  const obrasFiltradas = obras.filter((obra) =>
+    obra.titulo.toLowerCase().includes(pesquisa.toLowerCase())
+  );
+
 
   return (
     <>
@@ -70,7 +70,7 @@ function ObrasSeries() {
             return (
               <LivroCard
                 key={obra.id_obras}
-                id={obra.id_obras}
+                id_obras={obra.id_obras}
                 capa={`http://localhost/backlumiere/uploads/${obra.capa}`}
                 titulo={obra.titulo}
                 estrelas={obra.estrelas ?? 4}

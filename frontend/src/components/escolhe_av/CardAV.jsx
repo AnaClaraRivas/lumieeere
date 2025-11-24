@@ -1,19 +1,18 @@
-import React from "react"; 
+import React from "react";
 import { Link } from "react-router-dom";
 
 function CardAV({ tipo, dados }) {
-    return(
+    return (
         <div className="container text-center">
-            
+
             <div className="row row-cols-2">
-               <div className="container_av_rapida">
+                <div className="container_av_rapida">
                     <div className="col card_escolhe">
                         <h5 className="titulo_card_escolha">Quero fazer uma avaliação rápida! </h5>
 
-                        <Link 
-                            className="livro-btn" 
-                            to="/rapida"
-                            state={{ dados }}   // ➜ envia as informações da obra
+                        <Link
+                            className="livro-btn"
+                            to={`/rapida/${dados.id_obras}`}
                         >
                             Fazer uma avaliação rápida
                         </Link>
@@ -24,14 +23,14 @@ function CardAV({ tipo, dados }) {
                         <ul> 📽️Escreva um comentário sobre;</ul>
                         <ul> 📽️Diga se valeu a pena ler/assistir.</ul>
                     </div>
-               </div> 
+                </div>
 
                 <div className="container_av_rapida">
                     <div className="col card_escolhe">
                         <h5 className="titulo_card_escolha">Quero fazer uma avaliação detalhada!</h5>
 
-                        <Link 
-                            className="livro-btn" 
+                        <Link
+                            className="livro-btn"
                             to={`/detalhada/${tipo}`}
                             state={{ dados }}   // ➜ envia também para detalhada
                         >
@@ -46,7 +45,7 @@ function CardAV({ tipo, dados }) {
                         <ul>📽️Diga que emoção você sentiu;</ul>
                         <ul>📽️Avalie diferentes critérios;</ul>
                     </div>
-                </div>    
+                </div>
             </div>
 
         </div>

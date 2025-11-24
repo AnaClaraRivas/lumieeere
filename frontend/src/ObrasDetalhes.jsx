@@ -1,5 +1,5 @@
-import React from "react";
-import { useParams, useLocation } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
 
 import HeaderAuto from "./components/HeaderAuto";
 import Footer from "./components/Footer.jsx";
@@ -9,21 +9,53 @@ import CardDetalhesFilme from "./components/CardDetalhesFilme.jsx";
 import CardDetalhesSerie from "./components/CardDetalhesSerie.jsx";
 import CardAV from "./components/escolhe_av/CardAV.jsx";
 import Sinopse from "./components/Sinopse.jsx";
+import AvaliacoesObra from "./components/AvaliacoesObra.jsx";
+
 import AvaliacaoRapidaCard from "./components/AvaliacaoRapida.jsx";
 import AvaliacaoDetalhadaCard from "./components/AvaliacaoDetalhada.jsx";
-import CardEscolheFilmeSerie from "./components/escolhe_av/CardEscolheFilmeSerie.jsx";
 
 function ObrasDetalhes() {
-  const { tipo } = useParams();
+  const { tipo, idObras } = useParams(); 
   const location = useLocation();
-  const dados = location.state; 
+  const navigate = useNavigate();
 
-  if (!dados) {
+  const [dados, setDados] = useState(location.state || null);
+  const [loading, setLoading] = useState(!location.state);
+  const [erro, setErro] = useState("");
+
+  useEffect(() => {
+    if (!dados && idObras) {
+      setLoading(true);
+      fetch(`http://localhost/backlumiere/obras/buscarobra.php?id_obras=${idObras}`)
+        .then(res => res.json())
+        .then(res => {
+          if (res.erro) {
+            setErro("Erro ao buscar obra: " + res.mensagem);
+          } else {
+            setDados(res);
+          }
+        })
+        .catch(err => setErro("Erro ao conectar com o servidor."))
+        .finally(() => setLoading(false));
+    }
+  }, [dados, idObras]);
+
+  if (loading) {
+    return (
+      <main>
+        <Header />
+        <h2 style={{ textAlign: "center", marginTop: "40px" }}>Carregando dados da obra...</h2>
+        <Footer />
+      </main>
+    );
+  }
+
+  if (erro || !dados) {
     return (
       <main>
         <HeaderAuto />
         <h2 style={{ textAlign: "center", marginTop: "40px" }}>
-          Nenhum item selecionado.
+          {erro || "Nenhum item selecionado."}
         </h2>
         <Footer />
       </main>
@@ -35,8 +67,6 @@ function ObrasDetalhes() {
       <HeaderAuto />
 
       <section className="livroobrassection">
-
-        {/* MOSTRA O COMPONENTE CERTO */}
         {tipo === "livro" && (
           <LivroCardHeader
             capa={dados.capa}
@@ -48,25 +78,13 @@ function ObrasDetalhes() {
         )}
 
         {tipo === "filme" && (
-          <>
-            <CardDetalhesFilme
-              capa={dados.capa}
-              titulo={dados.titulo}
-              diretor={dados.autor}
-              ano={dados.ano}
-              dados={dados}
-            />
-
-            {/* Card de escolha para filme */}
-            {/* <CardEscolheFilmeSerie
-              capa={dados.capa}
-              titulo={dados.titulo}
-              estrelas={dados.estrelas ?? 0}
-              diretor={dados.autor ?? "Desconhecido"}
-              genero={dados.genero ?? "Não informado"}
-              lancamento={dados.ano ?? "N/A"}
-            /> */}
-          </>
+          <CardDetalhesFilme
+            capa={dados.capa}
+            titulo={dados.titulo}
+            diretor={dados.autor}
+            ano={dados.ano}
+            dados={dados}
+          />
         )}
 
         {tipo === "serie" && (
@@ -79,48 +97,15 @@ function ObrasDetalhes() {
           />
         )}
 
-        {/* SINOPSE */}
         <Sinopse texto={dados.descricao || "Sinopse indisponível."} />
 
         <CardAV tipo={tipo} dados={dados} />
 
+
         <div className="container mt-5">
-          <div className="row g-5">
-
-            <div className="col-md-6 mb-5">
-              <AvaliacaoRapidaCard
-                nome="Ana Clara Rivas"
-                data="21/09/25"
-                foto={dados.capa}
-                texto="Lorem ipsum is simply dummy text of the printing and typesetting industry..."
-              />
-            </div>
-
-            <div className="col-md-6 mb-5">
-              <AvaliacaoRapidaCard
-                nome="Ana Clara Rivas"
-                data="21/09/25"
-                foto={dados.capa}
-                texto="Lorem ipsum is simply dummy text of the printing and typesetting industry..."
-              />
-            </div>
-
+          <div className="row g-5 mb-5">
+            <AvaliacoesObra idObras={idObras} />
           </div>
-          <AvaliacaoDetalhadaCard
-            nome="Gabriely Santos"
-            data="03/09/25"
-            foto={dados.capa}
-            texto="Lorem ipsum is simply dummy text of the printing and typesetting industry..."
-            emocao="Me adotou emocionalmente"
-            criterios={{
-              enredo: 9,
-              personagens: 8,
-              fluidez: 10,
-              ambientacao: 9,
-              originalidade: 7
-            }}
-            veredito="Culpada de ser incrível"
-          />
         </div>
       </section>
 

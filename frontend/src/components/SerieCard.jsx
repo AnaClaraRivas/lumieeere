@@ -17,10 +17,12 @@ export default function SerieCard({ capa, titulo, estrelas, diretor, genero, lan
         <p><strong>Gênero:</strong> {genero}</p>
         <p><strong>Lançamento:</strong> {lancamento}</p>
 
-        <Link className="livro-btn" to={`/obrasdetalhes/${tipo}`}>
-          Quero avaliar esse série!
-          <span className="material-icons">search</span>
-        </Link >
+        <button
+          className="btn btn-secondary"
+          onClick={() => navigate(`/detalhes/${dados.tipo}/${dados.id_obras}`, { state: dados })}
+        >
+          Quero avaliar este filme!
+        </button>
       </div>
     </div>
   );

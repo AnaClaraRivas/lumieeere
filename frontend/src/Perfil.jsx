@@ -3,10 +3,11 @@ import React, { useEffect, useState } from "react";
 import InfoPerfil from "./components/InfoPerfil";
 import HeaderAuto from "./components/HeaderAuto";
 import Footer from "./components/Footer";
-import ComentarioPerfil from "./components/ComentarioPerfil";
+import AvaliacoesUsuario from "./components/AvaliacoesUsuario.jsx";
 import { Link, useNavigate } from "react-router-dom";
 import { pegarSessao, limparSessao } from "./auth";
 import "./perfil.css";
+
 
 export default function Perfil() {
   const [usuarioBanco, setUsuarioBanco] = useState(null);
@@ -19,7 +20,6 @@ export default function Perfil() {
       return;
     }
 
-    // busca dados atualizados do backend
     fetch("http://localhost/backlumiere/usuarios/buscar_usuario.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -41,21 +41,6 @@ export default function Perfil() {
     navigate("/login");
   };
 
-  const comentarios = [
-    {
-      nome: "Gabriely Santos",
-      livro: "O Pequeno Príncipe",
-      estrelas: 5,
-      texto: "É uma obra simples e encantadora, mas cheia de significados profundos. A narrativa leve e poética..."
-    },
-    {
-      nome: "Gabriely Santos",
-      livro: "O Pequeno Príncipe",
-      estrelas: 4,
-      texto: "Uma história tocante que ensina sobre amor, amizade e essência das pessoas..."
-    },
-    // ... (mantenha seus comentários)
-  ];
 
   if (!usuarioBanco) return null; // ou um loader
 
@@ -84,16 +69,8 @@ export default function Perfil() {
         </div>
       </div>
 
-      <div className="comentarios-grid">
-        {comentarios.map((item, index) => (
-          <ComentarioPerfil
-            key={index}
-            nome={item.nome}
-            livro={item.livro}
-            estrelas={item.estrelas}
-            texto={item.texto}
-          />
-        ))}
+      <div className="container mb-5">
+        <AvaliacoesUsuario />
       </div>
 
       <Footer />

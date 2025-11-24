@@ -7,7 +7,6 @@ import HeaderAuto from "./components/HeaderAuto";
 
 function ObrasFilmes() {
 
-
   // variaveis 
   const [obras, setObras] = useState([]);
   const [pesquisa, setPesquisa] = useState("");
@@ -80,7 +79,7 @@ function ObrasFilmes() {
           {obrasFiltradas.map((obra) => (
             <LivroCard
               key={obra.id_obras}
-              id={obra.id_obras}
+              id_obras={obra.id_obras}
               capa={`http://localhost/backlumiere/uploads/${obra.capa}`}
               titulo={obra.titulo}
               estrelas={obra.estrelas ?? 4}

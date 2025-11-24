@@ -90,7 +90,7 @@ function App() {
                                 {/* rotas públicas */}
                                 <Route path="/obraslivros" element={<ObrasLivros />} />
                                 <Route path="/estantes" element={<Estantes usuarioLogadoId={JSON.parse(localStorage.getItem("usuario"))?.id} />} />
-                                <Route path="/obrasdetalhes/:tipo" element={<ObrasDetalhes />} />
+                                <Route path="/detalhes/:tipo/:idObras" element={<ObrasDetalhes />} />
                                 <Route path="/cadastrarSeries" element={<Cadastrar_Series />} />
                                 <Route path="/cadastrarObras" element={<Cadastrar_Obras />} />
                                 <Route path="/escolheAvaliacao/:tipo" element={<Escolhe_Avaliacao />} />
