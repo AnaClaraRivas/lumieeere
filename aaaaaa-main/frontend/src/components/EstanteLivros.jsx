@@ -93,7 +93,7 @@ const EstanteLivros = ({
 
   return (
     <Container fluid className="estante-container p-0">
-      {/* Carrossel */}
+      {/* carrossel */}
       <div className="carousel-wrapper">
         <button className="carousel-nav-btn left" onClick={() => scrollSlider("left")}>&#9664;</button>
         <div className="slider-container d-flex flex-nowrap overflow-auto p-3 hide-scrollbar" ref={sliderRef}>
@@ -108,7 +108,7 @@ const EstanteLivros = ({
         <button className="carousel-nav-btn right" onClick={() => scrollSlider("right")}>&#9654;</button>
       </div>
 
-      {/* Cabeçalho */}
+      {/* cabeçalho */}
       <div
         className="d-flex justify-content-between align-items-center saga-header p-3 mt-3"
         onClick={() => setOpen(!open)}
@@ -120,7 +120,7 @@ const EstanteLivros = ({
         </Button>
       </div>
 
-      {/* Lista de obras */}
+      {/* lista de obras */}
       <Collapse in={open}>
         <div className="card-obras">
           <h4 className="mb-4 mt-2 ms-5 fw-bold">Obras:</h4>
@@ -137,42 +137,42 @@ const EstanteLivros = ({
       <Modal
         show={showModal}
         onHide={() => setShowModal(false)}
-        dialogClassName="modal-confirmar-senha"     // 🟦 estiliza o tamanho/estrutura do modal
-        contentClassName="modal-confirmar-senha-conteudo"  // 🟩 estiliza todo o conteúdo interno
+        dialogClassName="modal-confirmar-senha"    
+        contentClassName="modal-confirmar-senha-conteudo"  
       >
         <Modal.Header
           closeButton
-          className="modal-confirmar-senha-header"   // 🟥 estiliza o cabeçalho
+          className="modal-confirmar-senha-header"   
         >
           <Modal.Title className="modal-confirmar-senha-titulo">
             Confirme sua senha
           </Modal.Title>
         </Modal.Header>
 
-        <Modal.Body className="modal-confirmar-senha-body">   {/* 🟨 estiliza o corpo */}
-          <Form.Group className="form-group-senha">           {/* 🟪 estiliza o grupo da senha */}
-            <Form.Label className="label-senha">Senha:</Form.Label>   {/* 🟫 estiliza o texto 'Senha:' */}
+        <Modal.Body className="modal-confirmar-senha-body">   
+          <Form.Group className="form-group-senha">          
+            <Form.Label className="label-senha">Senha:</Form.Label>   
 
             <Form.Control
               type="password"
               value={senha}
               onChange={e => setSenha(e.target.value)}
-              className="input-senha"         // ⬜ estiliza o campo de input da senha
+              className="input-senha"        
             />
 
             {erro && (
-              <small className="erro-senha"> {/* ⬛ estiliza a mensagem de erro */}
+              <small className="erro-senha"> 
                 {erro}
               </small>
             )}
           </Form.Group>
         </Modal.Body>
 
-        <Modal.Footer className="modal-confirmar-senha-footer">  {/* 🔵 estiliza o rodapé */}
+        <Modal.Footer className="modal-confirmar-senha-footer">  
           <Button
             variant="secondary"
             onClick={() => setShowModal(false)}
-            className="botao-cancelar-senha"     // 🧡 estiliza o botão CANCELAR
+            className="botao-cancelar-senha"     
           >
             Cancelar
           </Button>
@@ -180,7 +180,7 @@ const EstanteLivros = ({
           <Button
             variant="primary"
             onClick={handleConfirmarSenha}
-            className="botao-confirmar-senha"    // 💜 estiliza o botão CONFIRMAR
+            className="botao-confirmar-senha"    
           >
             Confirmar
           </Button>
