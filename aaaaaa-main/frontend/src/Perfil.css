@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: #001A38;
+  background: #f4f7fb;
+  overflow-x: hidden;
+}
+
+/* TITULO */
+.titulo-pagina {
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.perfil-container {
+  width: 100%;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.perfil-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.perfil-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.perfil-avatar {
+  width: 70px;
+  height: 70px;
+  background: #d1d5db;
+  border-radius: 50%;
+}
+
+.perfil-btn {
+  padding: 8px 20px;
+  border: 2px solid #0a1a33;
+  background: #f4f7fb;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0a1a33;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.perfil-btn:hover {
+  background: #0a1a33;
+  color: #f4f7fb;
+}
+
+.comentarios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+
+/*PERFIL ADM*/
+.card_botao{
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-top: -60px;
+  margin-bottom: 55px;
+  padding: auto;
+}
+
+.titulo_cardzinho{
+  color: #f4f7fb;
+  margin-bottom: 15px !important;
+}
+
+.card_perfil{
+  background-color: #0a1a33;
+}
+
+.card_botao_perfil{
+  padding: 50px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+.dropdown-menu {
+  position: absolute !important;
+  z-index: 9999 !important;
+  align-items: center;
+}
+
+.card_perfil, .card_botao_perfil {
+  overflow: visible !important;
+}
+
+
+@media (max-width: 600px) {
+  .perfil-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .perfil-btn {
+    align-self: flex-start;
+  }
+
+    .row.row-cols-2 {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center;
+    margin-left: 15px !important;
+    margin-right: 50px !important;
+  }
+
+  .card_botao_perfil {
+    padding: 5px !important; 
+  }
+
+  .card_perfil {
+    width: 150% !important; 
+    max-width: 500px !important; 
+  }
+  
+  .card_botao {
+    display: flex;
+    margin-top: 0;
+    align-items: center; 
+  }
+}

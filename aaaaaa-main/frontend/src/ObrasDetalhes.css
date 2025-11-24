@@ -1,0 +1,169 @@
+/* CARD DETALHES */
+
+.card-header-livro {
+    background-color: #0B2239;
+    border-radius: 16px;
+    padding: 30px;
+    color: #fff;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10%;
+
+}
+
+.capa-livro {
+    width: 80%;
+    border-radius: 12px;
+}
+
+.detalhes-livro {
+    gap: 10px;
+}
+
+.detalhes-livro h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+
+/* SINOPSE DETALHES */
+
+.sinopse-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sinopse-titulo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.sinopse-linha {
+    flex: 1;
+    height: 2px;
+    background-color: #0B2239;
+    border-radius: 10px;
+}
+
+.sinopse-titulo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0B2239;
+    text-align: center;
+    margin: 0;
+}
+
+.sinopse-texto {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+/* AVALIACAO RAPIDA */
+.card-avaliacao-rapida {
+    background-color: #F5EEDC;
+    padding: 25px;
+    border-radius: 16px;
+}
+
+.foto-usuario {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.botao-resposta {
+    border: none;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: #0B2239;
+    transition: 0.2s ease-in-out;
+}
+
+
+/* AVALIACAO DETALHADA */
+.card-avaliacao-detalhada {
+  background: #F5EEDC;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  margin-bottom: 5%;
+}
+
+.lista-criterios {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-criterios li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: 500;
+  padding-bottom: 4px;
+}
+
+.veredito-card {
+  background: #0E2A45;
+  color: white;
+  border-radius: 16px;
+  padding: 15%;
+}
+
+.veredito-icone {
+  font-size: 32px;
+  margin: 6px 0;
+}
+
+.estrela-pequena{
+    color: rgb(255, 193, 7);
+}
+
+
+/* ________________adm______________________ */
+.drop_container{
+  background-color: #0B2239  !important;
+  color: #fff;
+  border: #0B2239;
+  border-radius: 15px;
+  align-items: left !important;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: -8px;
+}
+
+.drop_container:hover {
+  background-color: #0B2239;
+  color: #fff;
+}
+.drop_container:focus,
+.drop_container:active {
+  background-color: #0B2239 !important;
+  color: #fff !important;
+}
+
+.drop_lista{
+  width: 100%;
+  padding: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .criterios-coluna {
+    order: 3;
+  }
+}

@@ -1,0 +1,127 @@
+/* TITULO */
+.titulo-pagina {
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+
+.editar-container {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.editar-foto {
+  width: 120px;
+  height: 120px;
+  background: #d1d5db;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/847/847969.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.editar-texto {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0a1a33;
+  margin-bottom: 20px;
+}
+
+.email-texto {
+  font-size: 15px;
+  color: #3a3a3a;
+  margin-bottom: 20px;
+}
+
+.editar-input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 2px solid #0a1a33;
+  outline: none;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.editar-btn {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 2px solid #0a1a33;
+  background: #f4f7fb;
+  cursor: pointer;
+  font-weight: 600;
+  color: #0a1a33;
+  transition: 0.2s;
+  margin-bottom: 20px;
+}
+
+.editar-btn:hover {
+  background: #0a1a33;
+  color: white;
+}
+
+.sair-btn {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 2px solid #ff0000;
+  background: #f4f7fb;
+  cursor: pointer;
+  font-weight: 600;
+  color: #ff0000;
+  transition: 0.2s;
+}
+
+.sair-btn:hover {
+  background: #ff0000;
+  color: #f4f7fb;
+}
+
+/*FOTO USUARIO*/
+.foto_perfil {
+  width: 150px;              
+  height: 150px;
+  border-radius: 50%;        
+  background: #e0e0e0;       
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;         
+  cursor: pointer;           
+  border: 3px solid #0a1a33;    
+}
+
+.foto_perfil img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;         
+}
+
+.grid-item-left-third {
+  margin-bottom: 15px;
+}
+
+
+@media (max-width: 8000px) {
+    .grid-item-left-third {
+      margin-left: -35px !important;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .grid-item-left-third {
+      margin-left: auto !important;
+    }
+
+}
+
+
+

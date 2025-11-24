@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #001A38;
+    background: #f4f7fb;
+    overflow-x: hidden;
+}
+
+/* TITULO DA PÁGINA */
+.titulo-pagina{
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px !important;
+}
+
+/* OBRAS */
+
+/* destaques  */
+
+section#sec-destaques {
+    background: transparent;
+    max-width: auto;
+    margin: auto;
+}
+
+section#sec-destaques h2 {
+    font-size: 1.8rem;
+    color: #001A38;
+    margin-bottom: 25px;
+    margin-top: 17px;
+    position: relative;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    overflow: hidden;
+    flex-direction: row;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.capa {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+}
+
+.info {
+    padding: 15px;
+    flex: 1;
+    text-align: left;
+}
+
+.info h2 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #222;
+}
+
+.categoria {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.estrelas {
+    color: gold;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.descricao {
+    font-size: 0.95em;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+/* texto e pesquisa */
+.pesquisa-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+  padding: 20px 0;
+  flex-wrap: wrap; /* permite quebrar a linha */
+}
+
+.texto-pesquisa {
+  color: #001A38;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  text-align: right;
+}
+
+.linha {
+  width: 1px;
+  height: 40px;
+  background-color: #001A38;
+  opacity: 0.4;
+}
+
+.campo-pesquisa {
+  position: relative;
+}
+
+.input-pesquisa {
+  border: 1px solid rgba(0, 26, 56, 0.4);
+  border-radius: 20px;
+  padding: 8px 36px 8px 14px;
+  font-size: 0.9rem;
+  color: #001A38;
+  outline: none;
+ font-family: "Poppins", sans-serif;
+}
+
+.input-pesquisa::placeholder {
+  color: rgba(0, 26, 56, 0.5);
+}
+
+.botao-pesquisa {
+  position: absolute;
+  right: 8px;
+  top: 7px;
+  background: none;
+  border: none;
+  color: rgba(0, 26, 56, 0.7);
+  cursor: pointer;
+}
+
+.botao-pesquisa:hover {
+  color: #001a38b9;
+}
+
+.material-icons {
+  font-size: 20px;
+}
+
+/* banner cadastro */
+.banner-cadastro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #001A38;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px 30px;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 30px auto; /* centralizar SEM margin-left fixa */
+}
+
+.banner-icone {
+  width: 80px;
+  height: auto;
+}
+
+.banner-textos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.banner-frase {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f4f4f4;
+  line-height: 1.4;
+}
+
+.banner-botao {
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #f4f4f4;
+  background: transparent;
+  color: #f4f4f4;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.banner-botao:hover {
+  background: #f4f4f4;
+  color: #001A38;
+}
+/* filtros */
+.filtros-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* espaço entre os filtros */
+    margin: 20px 0;
+    flex-wrap: wrap; /* permite quebrar linha */
+}
+
+/* === Estilização dos selects === */
+.filtro-select {
+    font-family: "Poppins", sans-serif;
+    border: 1.5px solid #001A38;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 0.9rem;
+    color: #001A38;
+    background-color: white;
+    cursor: pointer;
+
+    /* remove estilo padrão feio */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    /* espaço para a seta */
+    padding-right: 30px;
+
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%23001A38' height='22' viewBox='0 0 24 24' width='22' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+/* Hover */
+.filtro-select:hover {
+  background-color: #f1f4f7;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1000px) {
+
+    main {
+        padding-top: 180px;
+    }
+
+    .card {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .capa {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .info {
+        text-align: center;
+    }
+
+    .pesquisa-container {
+        flex-direction: column; /* empilha o texto e a barra */
+        gap: 20px;
+        text-align: center;
+    }
+
+    .texto-pesquisa {
+        text-align: center;
+        font-size: 15px;
+        /* max-width: 230px; */
+    }
+
+    .linha {
+        display: none; /* esconde a linha vertical */
+    }
+
+    .banner-cadastro {
+    gap: 20px;
+
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 20px 20px; /* centralizado */
+  }
+
+  .banner-textos {
+    align-items: center;
+  }
+
+  .banner-icone {
+    width: 60px;
+  }
+
+  .banner-frase {
+    font-size: 1rem;
+  }
+
+  .filtros-container {
+    gap: 15px;
+    flex-direction: column;  /* empilha no celular */
+  }
+
+  .filtro-select {
+    width: 70%;
+    text-align: center;
+  }
+}

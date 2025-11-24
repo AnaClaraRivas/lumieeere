@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #001A38;
+    background: #f4f7fb;
+    overflow-x: hidden;
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #001A38;
+    z-index: 100;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    padding: 20px 0;
+}
+
+.nav-container {
+    margin: 0 auto;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-weight: 600;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* menu mobile */
+.menu-mobile {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background: linear-gradient(45deg, #ffffff, #e9e9e9);
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.menu-mobile.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-mobile.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-mobile.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* nav mobile */
+.mobile-nav {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    border-radius: 20px;
+    padding: 30px;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    background: #001A38;
+}
+
+.mobile-nav.active {
+    display: flex;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.mobile-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.1rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+.mobile-nav a:hover {
+    background: rgba(224,163,255,0.1);
+    color: #000000;
+}
+
+/* TITULO DA PÁGINA */
+.titulo-pagina{
+    text-align: center;
+    padding: 20px;
+}
+
+/* OBRAS */
+
+/* destaques  */
+
+section#sec-destaques {
+    background: transparent;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section#sec-destaques h2 {
+    font-size: 1.8rem;
+    color: #001A38;
+    margin-bottom: 25px;
+    position: relative;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    overflow: hidden;
+    flex-direction: row;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.capa {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+}
+
+.info {
+    padding: 15px;
+    flex: 1;
+    text-align: left;
+}
+
+.info h2 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #222;
+}
+
+.categoria {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.estrelas {
+    color: gold;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.descricao {
+    font-size: 0.95em;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1000px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: flex;
+    }
+
+    .mobile-nav {
+        top: 80px;
+    }
+
+    main {
+        padding-top: 180px;
+    }
+
+    .card {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .capa {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .info {
+        text-align: center;
+    }
+}

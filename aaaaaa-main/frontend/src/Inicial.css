@@ -1,0 +1,138 @@
+.paginicial{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    padding-top: 100px;
+}
+
+h1, h3{
+    color: #001A38;
+    font-weight: 700;
+}
+
+.titulo{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.imginicial{
+    width: 100%;
+    float: inline-end;
+}
+
+.cardinicial{
+    background-color: #EFEFEF;
+    border-radius: 40px;
+    border: none;
+    padding: 50px;
+    align-items: center;
+}
+
+.divobrasinicial{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.cardopicao{
+    background-color: #D9D9D9;
+    border-radius: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulocard{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.imgcard{
+    width: 90px;
+    float: inline-start;
+}
+
+.btnavaliar{
+    background-color: #001A38;
+    color: #EDE7DB;
+    text-decoration: none;
+    border-radius: 40px;
+    padding: 10px;
+    width: 200px;
+}
+
+.btnavaliar:hover{
+    background-color: #D9D9D9;
+    color: #001A38;
+    border: 1px solid #001A38;
+    transition: 0.5s;
+}
+
+.col-6{
+    width: 50%;
+}
+
+
+/*INICIAL ADM*/
+.botao_lixo{
+    background-color: transparent;
+    border: none;
+}
+
+.botao_lixo:hover{
+     background-color: #d4cfc3 !important;
+}
+
+.botao_lixo:active{
+    background-color: #d4cfc3 !important;
+}
+
+
+.lixinho{
+    color: #001A38;
+    width: 100%;
+}
+
+.lixinho:hover{
+    background-color: #d4cfc3 !important;
+}
+
+.lixinho:active{
+    background-color: #d4cfc3 !important;
+}
+
+
+@media (max-width: 768px) {
+    .titulo{
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    .imginicial{
+        float: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .col-6{
+        width: 100%;
+    }
+
+    .imgcard{
+        float: none;
+    }
+}

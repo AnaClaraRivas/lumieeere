@@ -1,0 +1,199 @@
+.Retangulo_Azul {
+  max-width: 1000px; 
+  min-height: 400px;
+  background: #001A38;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+
+
+}
+.Retangulo_Cinza{
+  max-width: 1000px;      
+  min-height: 250px;
+  background: #ECE7DB;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.Retangulo_Cinza1{
+  max-width: 1000px;     
+  min-height: 200px;
+  background: #ECE7DB;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.Grid_Av_L {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%; 
+  color: 001A38;     
+           
+}
+
+.box_L {
+  width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+}
+.Scd_Grid_Av_L{
+  display: grid;
+  grid-template-rows: auto auto;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;           
+}
+.Left_Text_L{
+  text-align: center;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.btn-L{
+  border: 2px solid black;
+  padding: 10px 20px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: white;
+  width: 310px;
+  height: 45px;
+  text-decoration: none;
+  color: #001A38;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.btn-L:hover{
+  background-color: #D9D9D9;
+  color: #001A38;
+  border: 1px solid #001A38;
+  transition: 0.5s;
+}
+.Button_L{
+    display: flex   ;
+    justify-content: center;
+}
+.Left_Text_L{
+  text-align: center;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Grid_Ret_Azul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  
+  gap: 20px;
+  width: 100%;
+                  
+}
+.Text_Ret_Azul{
+  text-align: center;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #D9D9D9;
+
+}
+.row_Ret_Azul{
+  margin-top: 20px;
+  display: flex;
+}
+.h3_noblue{
+  color: #D9D9D9;
+  text-align: left;
+}
+.h5_noblue{
+  color: #D9D9D9;
+  text-align: left;
+  font-weight: 100 !important;
+  margin-bottom: 0px !important;
+}
+.Estrelas_IMG{
+  height: 30px;
+  width: 50;
+}
+.h5_noblue_noline{
+  color: #D9D9D9;
+  text-align: left;
+  font-weight: 100 !important;
+  margin-bottom: 0px !important;
+  line-height: 1.5 !important;
+  padding-left: 5px;
+}
+.Harry_Potter_IMG{
+  height: 400px;
+  width: 300px;
+  margin-top: -40px;
+}
+.Left_Box_Ret_Azul{
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 750px) {
+  .Grid_Av_L{
+    grid-template-columns: 1fr;
+    padding-top: 20px;
+    padding-bottom: 5px;
+ }
+}
+@media (max-width: 750px) {
+  .Grid_Ret_Azul{
+    grid-template-columns: 1fr;
+ }
+}
+@media (max-width: 750px) {
+  .Right_Box_Ret_Azul{
+    margin: 0 auto;
+    width: fit-content;
+    padding-bottom: 25px;
+    padding-top: 20px;
+ }
+}
+@media (max-width: 750px) {
+  .box_L{
+    margin: 0 auto;
+    width: fit-content;
+
+ }
+}
+@media (max-width: 750px) {
+  .row_Ret_Azul{
+    margin: 0 auto;
+    width: fit-content;
+
+ }
+}
+@media (max-width: 750px) {
+  .Main_Title_CO{
+    padding-top: 0px;
+
+
+ }
+}
+

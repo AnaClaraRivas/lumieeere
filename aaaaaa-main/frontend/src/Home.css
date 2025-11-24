@@ -1,0 +1,236 @@
+ * {
+  box-sizing: border-box;
+  margin: 0; 
+  padding: 0;
+}
+
+.textobranco{
+    color: #EDE7DB;
+}
+
+.textoazul{
+    color: #001A38;
+}
+
+/* home */
+
+.home{
+    background-image: url(/img/fundo.png);
+    background-attachment: fixed;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+.fontecinzel{
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.imglogohome {
+    width: 25%;
+    float: right; 
+
+}
+
+.titulohome {
+    text-align: left;
+}
+
+.botaoentrar {
+    text-decoration: none;
+    border: 1px solid #EDE7DB;
+    border-radius: 40px;
+    padding: 12px 30px;
+}
+
+.botaoentrar:hover{
+    background-color: #EDE7DB;
+    color: #001A38;
+    transition: 0.5s;
+}
+
+.divlogo{
+    padding-top: 10px;
+}
+
+.imgcameralivros{
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.diventrar{
+    position: relative;
+    left: 200px;
+}
+
+.textentrar{
+    margin-bottom: 30px !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; 
+  justify-items: center;
+  align-items: start;
+  margin: 10px auto;
+  max-width: 1100px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+
+}
+
+.grid2{
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr);
+    gap: 0.5rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.grid3{
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr);
+    gap: 0.5rem;
+    justify-items: center;
+    align-items: center;
+    line-height: 15px;
+}
+
+.cardfilmehome,
+.cardseriehome {
+    background-color: #26364E;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+.cardlivrohome{
+    background-color: #EDE7DB;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}  
+
+.postershome{
+    width: 35%;
+    border-radius: 10px;
+}
+
+.cardfilmehome:hover,
+.cardlivrohome:hover,
+.cardseriehome:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* responsividade home */
+
+@media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .imgcameralivros {
+        display: none;
+    }
+
+    .divlogo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    .logohome {
+        text-align: center;
+    }
+    
+    .imglogohome {
+        width: 40%;
+        float: none;
+        margin: 0 auto 10px auto;
+        display: block;
+    }
+
+    .divlogo h1 {
+        text-align: center;
+        line-height: 1.3;
+    }
+    
+    .row.align-items-center {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .diventrar {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .textentrar {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 0 auto 30px auto;
+    }
+
+    .botaoentrar {
+        display: inline-block;
+        margin: 0 auto;
+        font-size: 1rem;
+        padding: 12px 30px;
+        text-align: center;
+    }
+
+    .sloganhome{
+        display: inline;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1100px) {
+    .grid {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .titulohome{
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 340px){
+    .grid2{
+        display:contents;
+    }
+
+    .grid3{
+      grid-template-columns: 1fr 1fr;
+    }
+}

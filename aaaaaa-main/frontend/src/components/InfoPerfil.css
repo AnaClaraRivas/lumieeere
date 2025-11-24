@@ -1,0 +1,12 @@
+.user-info h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #0a1a33;
+}
+
+.user-avaliacoes,
+.user-data {
+  font-size: 14px;
+  color: #475569;
+  margin-top: 2px;
+}

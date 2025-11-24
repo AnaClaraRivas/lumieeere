@@ -1,0 +1,282 @@
+
+.estante-container {
+    background-color: #f5f0e3;
+    padding: 1%;
+    border-radius: 2%;
+    margin-bottom: 5%;
+    height: 50%;
+}
+
+.livro-item {
+    flex: 0 0 200px; 
+    padding-right: 2% !important;
+    margin-right: 5%;
+}
+
+.estante-titulo {
+    margin-top: 13% !important;
+    color: #001A38;
+    font-weight: bold;
+    padding-top: 2rem;
+}
+
+.saga-header {
+    margin: 1rem 0;
+}
+
+.btn-editar-estante {
+    background-color: #f3eadc;
+    padding: 5px 12px;
+    border: 2px solid  #001A38;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #001A38;
+}
+
+.btn-editar-estante:hover {
+    background-color: #001A38;
+    color:  #f3eadc;
+    border: 2px solid #001A38;
+}
+
+.slider-container {
+    background-color: transparent;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.livro-card-estante{
+  width: 130% !important;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/*Colapse*/
+
+.card-img, .card-img-bottom, .card-img-top {
+    width: 100% !important;}
+
+/*accordion */
+.card-obras {
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+}
+
+/* Estado fechado */
+.card-obras.collapsed {
+  max-height: 0;
+  opacity: 0;
+  padding: 0 1rem; /* mantém um pouco de padding lateral */
+}
+
+/* Estado aberto */
+.card-obras.expanded {
+  max-height: 2000px; /* valor alto para garantir que cabe todo conteúdo */
+  opacity: 1;
+  padding: 2rem 1rem;
+}
+
+.saga-header {
+  transition: background-color 0.3s ease;
+}
+
+.saga-header:hover {
+  background-color: #e6dcc9;
+}
+
+.btn-editar-estante {
+  transition: transform 0.3s ease;
+}
+
+.btn-editar-estante:active {
+  transform: scale(0.95);
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.0); /* Inicialmente invisível */
+  border: none;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px;
+  opacity: 0;
+  transition: opacity .4s ease, transform .3s ease;
+}
+
+.carousel-wrapper:hover .carousel-nav-btn {
+  opacity: 0.9;
+}
+
+.carousel-nav-btn:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+
+.carousel-nav-btn.left {
+  left: 10px;
+}
+
+.carousel-nav-btn.right {
+  right: 10px;
+}
+
+.slider-container {
+  scroll-behavior: smooth;
+  transition: scroll 0.4s ease-in-out;
+}
+
+.livro-item {
+  transition: transform .25s ease, filter .25s ease;
+}
+
+.livro-item:hover {
+  transform: scale(1.07);
+  filter: brightness(1.08);
+}
+
+
+/* ============================
+   MODAL DE CONFIRMAR SENHA (ATUALIZADO)
+   ============================ */
+
+/* Estrutura geral */
+.modal-confirmar-senha {
+  max-width: 550px !important;   /* Aumenta a largura */
+  margin: auto;
+  margin-top: 10%;
+}
+
+/* Conteúdo interno */
+.modal-confirmar-senha-conteudo {
+  background-color: rgb(245, 240, 227);
+  border-radius: 25px;
+  border: 3px solid #0a1a33;
+  padding: 10px 5px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Título e header */
+.modal-confirmar-senha-header {
+  background-color: transparent;
+  border-bottom: 2px solid #0a1a33;
+  padding: 20px 25px;
+}
+
+.modal-confirmar-senha-titulo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0a1a33;
+}
+
+/* Corpo */
+.modal-confirmar-senha-body {
+  padding: 25px 25px;
+}
+
+/* Campo da senha */
+.form-group-senha {
+  margin-bottom: 15px;
+}
+
+.label-senha {
+  font-weight: 600;
+  color: #0a1a33;
+  margin-bottom: 8px;
+}
+
+.input-senha {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 20px;
+  border: 2px solid #0a1a33;
+  background-color: rgb(245, 240, 227);
+  outline: none;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.input-senha:focus {
+  border-color: #050d1a;
+}
+
+/* Erro */
+.erro-senha {
+  color: #af0600;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Rodapé — agora alinhado e com botões lado a lado */
+.modal-confirmar-senha-footer {
+  border-top: 2px solid #0a1a33;
+  padding: 20px 25px;
+
+  display: flex;
+  justify-content: center;     /* CENTRALIZA OS BOTÕES */
+  gap: 15px;                   /* Espaço entre os botões */
+}
+
+/* Botão cancelar */
+.botao-cancelar-senha {
+  width: 45%;
+  padding: 12px 15px;
+  border-radius: 25px !important;
+  border: 2px solid #0a1a33 !important;
+  font-weight: 600;
+  color: #0a1a33 !important;
+  background: transparent !important;
+  transition: 0.2s;
+}
+
+.botao-cancelar-senha:hover {
+  background: #0a1a33 !important;
+  color: #fff !important;
+}
+
+/* Botão confirmar */
+.botao-confirmar-senha {
+  width: 45%;
+  padding: 12px 15px;
+  border-radius: 25px !important;
+  border: 2px solid #0a1a33 !important;
+  font-weight: 600;
+  color: #dbdaca !important;
+  background: #0a1a33 !important;
+  transition: 0.2s;
+}
+
+.botao-confirmar-senha:hover {
+  background: #050d1a !important;
+}
+
+/* Força o modal a ficar centralizado verticalmente */
+.modal-dialog-centered {
+  display: flex !important;
+  align-items: center !important;
+  min-height: 100vh !important;
+}
+
+@media (max-width: 750px) {
+  .modal-confirmar-senha{
+    width: 90%;
+    margin-top: 40%;
+ }
+}

@@ -1,0 +1,175 @@
+.Main_Title_CO {
+  padding-top: 110px;
+  text-align: center;
+  font-weight: 900;
+}
+
+.formscss {
+  border: 2px solid #001A38;
+  border-radius: 15px; 
+  padding: 8px 12px;
+  background-color: #fff !important;
+}
+
+.Tit_Nome_Livro {
+  padding-bottom: 5px;
+  font-weight: 600;
+  display: block;
+}
+
+
+.Box_Tit {
+  justify-content: center;
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+.grid-container_tdr {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+}
+
+.grid-item-left-third {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-item-right-third {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+.Gray_Rectangle {
+  width: 300px;
+  height: 350px;
+  background-color: #D9D9D9;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gray-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+
+.Box_middle {
+  justify-content: flex-start;
+  padding-top: 10px;
+  padding-right: 0;
+}
+
+
+.Big_Box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.Big_Box_Livro {
+  border: 2px solid #333;
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+
+}
+
+
+.btn-cad {
+  border: 2px solid black;
+  padding: 10px 20px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  background-color: white;
+}
+
+.btn-cad:hover {
+  background-color: #D9D9D9;
+  color: #001A38;
+  border: 1px solid #001A38;
+  transition: 0.5s;
+}
+
+.botao_cad {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.botoes_inidicativo {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+@media (max-width: 900px) {
+  .Gray_Rectangle {
+    width: 200px;
+    height: 250px;
+  }
+
+  .Big_Box_Livro {
+    width: 70%;
+    max-width: 600px;
+    height: 220px;
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  .grid-container_tdr {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid-item-right-third {
+    padding-left: 0;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .Big_Box_Livro {
+    width: 75%;
+    max-width: 95%;
+    height: 180px;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 430px) {
+  .Box_Tit_Livro {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .Big_Box_Livro {
+    width: 95%;
+    height: 160px;
+    font-size: 13px;
+    margin-left: 10px;
+  }
+}

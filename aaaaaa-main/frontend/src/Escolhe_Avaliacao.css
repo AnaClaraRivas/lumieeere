@@ -1,0 +1,125 @@
+.livro_card_escolher {
+    width: 90%;
+    background-color: #0b2239;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 80px;
+    max-width: 900px;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+.livro_capa_escolhe {
+  width: 170px;
+  border-radius: 8px;
+}
+
+.livro_titulo_escolhe{
+      font-size: 1.4rem;
+      color: #d7e2f0;
+      margin-top: 40px !important;
+}
+
+.livro_informa {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #d7e2f0 !important;
+}
+
+
+/*__________________________card_avaliacações__________________________*/
+
+.container_av_rapida{
+    width: 90%;
+    background-color: #e4dfd0;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: left;
+    gap: 30px;
+    padding: 50px;
+    max-width: 900px;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+.textinho_avra{
+    text-align: left;
+}
+
+.titulo_card_escolha{
+     text-align: left;
+}
+
+.card_escolhe{
+    margin: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+/*________________media_______________*/
+
+
+/* --- Tablets (até 992px) --- */
+@media (max-width: 992px) {
+    .container_av_rapida {
+        flex-direction: column;
+        text-align: left;
+        padding: 40px;
+    }
+
+    .card_escolhe {
+        margin: 20px 0;
+    }
+
+    .textinho_avra {
+        text-align: left;
+    }
+
+    .livro_card_escolher {
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    .livro_capa_escolhe {
+        width: 150px;
+        margin: 0 auto;
+    }
+
+    .livro_titulo_escolhe {
+        text-align: left;
+        margin-top: 20px !important;
+    }
+}
+
+/* --- Celulares (até 576px) --- */
+@media (max-width: 576px) {
+    .container_av_rapida {
+        padding: 30px;
+        gap: 20px;
+    }
+
+    .livro_card_escolher {
+        padding: 30px;
+        gap: 20px;
+    }
+
+    .livro_capa_escolhe {
+        width: 130px;
+    }
+
+    .card_escolhe {
+        margin: 10px 0;
+    }
+
+    .titulo_card_escolha {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    ul {
+        font-size: 0.9rem;
+    }
+}
