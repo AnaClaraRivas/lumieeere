@@ -66,7 +66,7 @@ function ObrasSeries() {
           </div>
 
           {obrasFiltradas.map((obra) => {
-            console.log(obra); // <- veja os dados que estão vindo
+            console.log(obra);
             return (
               <LivroCard
                 key={obra.id_obras}
