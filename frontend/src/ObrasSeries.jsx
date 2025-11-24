@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Header from "./components/Header";
+import HeaderAuto from "./components/HeaderAuto";
 import CardContainer from "./components/CardContainer";
 import LivroCard from "./components/LivroCard";
 import Footer from "./components/Footer";
@@ -30,7 +30,7 @@ function ObrasSeries() {
 
   return (
     <>
-      <Header />
+      <HeaderAuto />
       <main>
         <h1 className="titulo-pagina">SÉRIES</h1>
         <section id="sec-destaques">

@@ -29,9 +29,17 @@ function Login() {
       }
 
       if (dados.status === "ok") {
-        // salva sessão e redireciona
+        // Salvar sessão
         salvarSessao(dados.usuario);
-        navigate("/inicial");
+
+        // 🔥 Redirecionamento baseado no tipo do usuário
+        if (dados.usuario.tipo_usuario === "Administrador") {
+          navigate("/inicialADM");
+        } else if (dados.usuario.tipo_usuario === "Avaliador") {
+          navigate("/inicial");
+        } else {
+          alert("Tipo de usuário desconhecido.");
+        }
       }
     } catch (erro) {
       alert("Erro ao conectar com o servidor.");
@@ -46,17 +54,18 @@ function Login() {
       </style>
 
       <div className="row">
-        <div className="col-md-6 col-sm-12 entrar divbranca" style={{alignItems: "normal"}}>
+        {/* Lado esquerdo (login) */}
+        <div className="col-md-6 col-sm-12 entrar divbranca" style={{ alignItems: "normal" }}>
           <h1 className="textoazul" style={{ fontWeight: "700", textAlign: "left" }}>
             Faça seu login
           </h1>
 
           <form onSubmit={login}>
+            {/* Email */}
             <div className="divemail">
               <img className="imgpessoa" src="/img/email.png" alt="Email" />
               <label className="form-label">Email</label>
             </div>
-
             <input
               type="email"
               className="form-control input"
@@ -66,11 +75,11 @@ function Login() {
               required
             />
 
+            {/* Senha */}
             <div className="divsenha">
               <img className="imgsenha" src="/img/senha.png" alt="Senha" />
               <label className="form-label textoazul">Senha</label>
             </div>
-
             <input
               type="password"
               className="form-control input"
@@ -80,6 +89,7 @@ function Login() {
               required
             />
 
+            {/* Lembrar senha */}
             <div className="lembrarsenha">
               <input type="checkbox" className="form-check-input" id="remember" />
               <label className="form-check-label textoazul" htmlFor="remember">
@@ -87,19 +97,22 @@ function Login() {
               </label>
             </div>
 
+            {/* Esqueceu senha */}
             <div className="esqueceusenha">
               <Link to="/esqueceusenha" className="textoazul" style={{ display: "block", marginTop: "10px" }}>
                 Esqueceu a senha?
               </Link>
             </div>
 
+            {/* Botão entrar */}
             <button className="btnentrar textobranco btn" type="submit">
               Entrar
             </button>
           </form>
         </div>
 
-        <div className="col-md-6 col-sm-12 criarconta divazul" style={{alignItems: "normal"}}>
+        {/* Lado direito (criar conta) */}
+        <div className="col-md-6 col-sm-12 criarconta divazul" style={{ alignItems: "normal" }}>
           <h1 className="textobranco textoleft" style={{ fontWeight: "700" }}>
             Ainda não tem uma conta?
           </h1>

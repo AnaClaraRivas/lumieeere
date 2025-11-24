@@ -1,4 +1,4 @@
-import Header from "./components/Header.jsx";
+import HeaderAuto from "./components/HeaderAuto";
 import Footer from "./components/Footer.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Avaliacoes_Filmes.css';
@@ -6,11 +6,12 @@ import './App.css';
 import { Link } from "react-router-dom";
 import LA_land from "./assets/img/La_land.png";
 
+
 function Avaliacoes_Filmes(){
     return(
         <main>
             <div className="pag_av_filmes">
-            <Header />
+            <HeaderAuto />
                 <section>
                     <h2 className="Main_Title_CO">AVALIAÇÕES</h2>
                 </section>

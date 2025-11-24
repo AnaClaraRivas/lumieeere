@@ -1,7 +1,7 @@
 // src/EditarPerfil.jsx 
 import React, { useState, useEffect } from "react";
 import "./EditarPerfil.css";
-import Header from "./components/Header";
+import HeaderAuto from "./components/HeaderAuto";
 import Footer from "./components/Footer";
 import { pegarSessao, salvarSessao, limparSessao } from "./auth";
 import { useNavigate } from "react-router-dom";
@@ -88,7 +88,7 @@ export default function EditarPerfil() {
 
   return (
     <>
-      <Header />
+      <HeaderAuto />
 
       <h1 className="titulo-pagina">EDITAR PERFIL</h1>
 

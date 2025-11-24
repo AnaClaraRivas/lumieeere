@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from "./components/Header";
+import HeaderAuto from "./components/HeaderAuto";
 import Footer from "./components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Cadastrar_Filmes.css";
@@ -97,7 +97,7 @@ function CadastrarObra() {
 
     return (
         <div className="pag_Filmes">
-            <Header />
+            <HeaderAuto />
 
             <div className="container my-5">
                 <h2 className="text-center fw-bold mb-4">{titulo || "Cadastrar Obra"}</h2>

@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
-import Header from "./components/Header";
 import CardContainer from "./components/CardContainer";
 import LivroCard from "./components/LivroCard";
 import Footer from "./components/Footer";
 import "./ObrasLivros.css";
+import HeaderAuto from "./components/HeaderAuto";
 
 function ObrasFilmes() {
 
-  // variaveis 
-   const [obras, setObras] = useState([]);
-    const [pesquisa, setPesquisa] = useState("");
 
-    // back
+  // variaveis 
+  const [obras, setObras] = useState([]);
+  const [pesquisa, setPesquisa] = useState("");
+
+  // back
   useEffect(() => {
     const carregarObras = async () => {
       try {
@@ -33,12 +34,16 @@ function ObrasFilmes() {
 
   return (
     <>
-      <Header />
+    
+    <HeaderAuto/>
+
       <main>
         <h1 className="titulo-pagina">FILMES</h1>
+
         <section id="sec-destaques">
           <h2>Destaques</h2>
           <CardContainer />
+
           <div className="pesquisa-container">
             <p className="texto-pesquisa">
               Pesquise um filme para avaliar <br /> ou ver as avaliações feitas!
@@ -57,12 +62,16 @@ function ObrasFilmes() {
               </button>
             </div>
           </div>
+
           <div className="banner-cadastro">
             <div className="banner-textos">
               <p className="banner-frase">
                 Sentiu falta de algum filme? <br /> Cadastre ele no nosso sistema!
               </p>
-              <button className="banner-botao" onClick={() => (window.location.href = "/cadastrarObras")}>
+              <button
+                className="banner-botao"
+                onClick={() => (window.location.href = "/cadastrarObras")}
+              >
                 Cadastrar um novo filme!
               </button>
             </div>
@@ -80,13 +89,11 @@ function ObrasFilmes() {
               ano={obra.ano_lancamento ? obra.ano_lancamento.substring(0, 4) : "-"}
               descricao={obra.descricao}
               tipo="filme"
-
             />
           ))}
-
-
         </section>
       </main>
+
       <Footer />
     </>
   );

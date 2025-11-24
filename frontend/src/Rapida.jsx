@@ -1,7 +1,7 @@
 // src/Rapida.jsx
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import Header from "./components/Header";
+import HeaderAuto from "./components/HeaderAuto";
 import Footer from "./components/Footer";
 import Capa from "./components/avaliacao_detalhada/Capa";
 import ComentarioRapida from "./components/ComentarioRapida";
@@ -92,7 +92,7 @@ function Rapida() {
 
   return (
     <main>
-      <Header />
+      <HeaderAuto />
 
       <h1 className="titulo-pagina">AVALIAÇÕES</h1>
 

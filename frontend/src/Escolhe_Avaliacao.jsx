@@ -6,7 +6,7 @@ import capa from "./assets/img/minhavida1.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-import Header from "./components/Header.jsx";
+import HeaderAuto from "./components/HeaderAuto";
 import Footer from "./components/Footer.jsx";
 
 import CardEscolheLivro from "./components/escolhe_av/CardEscolheLivro.jsx";
@@ -26,7 +26,7 @@ function Escolhe_Avaliacao() {
 
   return (
     <main>
-      <Header />
+      <HeaderAuto />
 
       <h1 className="titulo-pagina">AVALIAÇÕES</h1>
 

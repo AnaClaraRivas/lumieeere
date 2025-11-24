@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 function Criarconta() {
   const navigate = useNavigate();
-
+  
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");

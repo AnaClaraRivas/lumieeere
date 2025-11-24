@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 import EstanteLivros from "../componentsAdm/EstanteLivrosAdm.jsx";
-import Header from "../components/Header.jsx";
+import HeaderADM from "../componentsAdm/HeaderADM.jsx";
 import Footer from '../components/Footer.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Estantes.css';
@@ -86,7 +86,7 @@ function EstantesAdm() {
 
   return (
     <div className="EstanteTeste">
-      <Header />
+      <HeaderADM />
       <h2 className="text-center my-4 estante-titulo">ESTANTES</h2>
 
       {estantes.map((dados) => {

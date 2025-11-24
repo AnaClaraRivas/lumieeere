@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, useLocation } from "react-router-dom";
 
-import Header from "./components/Header.jsx";
+import HeaderAuto from "./components/HeaderAuto";
 import Footer from "./components/Footer.jsx";
 
 import LivroCardHeader from "./components/CardDetalhes.jsx";
@@ -21,7 +21,7 @@ function ObrasDetalhes() {
   if (!dados) {
     return (
       <main>
-        <Header />
+        <HeaderAuto />
         <h2 style={{ textAlign: "center", marginTop: "40px" }}>
           Nenhum item selecionado.
         </h2>
@@ -32,7 +32,7 @@ function ObrasDetalhes() {
 
   return (
     <main>
-      <Header />
+      <HeaderAuto />
 
       <section className="livroobrassection">
 

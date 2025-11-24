@@ -1,7 +1,7 @@
 // src/Perfil.jsx
 import React, { useEffect, useState } from "react";
 import InfoPerfil from "./components/InfoPerfil";
-import Header from "./components/Header";
+import HeaderAuto from "./components/HeaderAuto";
 import Footer from "./components/Footer";
 import ComentarioPerfil from "./components/ComentarioPerfil";
 import { Link, useNavigate } from "react-router-dom";
@@ -61,7 +61,7 @@ export default function Perfil() {
 
   return (
     <>
-      <Header />
+      <HeaderAuto />
 
       <h1 className="titulo-pagina">PERFIL</h1>
 

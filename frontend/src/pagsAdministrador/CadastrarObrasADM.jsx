@@ -1,17 +1,17 @@
-import HeaderAuto from "./components/HeaderAuto";
-import Footer from "./components/Footer.jsx";
+import HeaderADM from "../componentsAdm/HeaderADM.jsx";
+import Footer from "../components/Footer.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Cadastrar_Obras.css';
-import './App.css';
-import LumiereImg from "./assets/img/Lumiere_img.png"; 
+import '../Cadastrar_Obras.css';
+import '../App.css';
+import LumiereImg from "../assets/img/Lumiere_img.png"; 
 import { Link } from "react-router-dom";
 
 
-function Cadastrar_Obras(){
+function CadastrarObrasADM(){
     return(
         <main>
             <div className="pag_Cad_Obras">
-                <HeaderAuto />
+                <HeaderADM />
                 <section>
                     <h2 className="Main_Title_CO">CADASTRAR NOVA OBRA</h2>
                 </section>
@@ -56,5 +56,5 @@ function Cadastrar_Obras(){
         </main>
     )
 } 
-export default Cadastrar_Obras;
+export default CadastrarObrasADM;
 

@@ -1,4 +1,4 @@
-import Header from "./components/Header.jsx";
+import HeaderAuto from "./components/HeaderAuto";
 import Footer from "./components/Footer.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Avaliacoes_Series.css';
@@ -11,7 +11,7 @@ function Avaliacoes_Series(){
     return(
         <main>
             <div className="pag_av_series">
-            <Header />
+            <HeaderAuto />
                 <section>
                     <h2 className="Main_Title_CO">AVALIAÇÕES</h2>
                 </section>

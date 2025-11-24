@@ -1,4 +1,3 @@
-
 // importa coiso especifico do react
 import React, { useState, useEffect } from "react";
 
@@ -10,19 +9,13 @@ import "../components/Header.css";
 
 import { Link } from "react-router-dom";
 
-// o componente em si e seu nome 
 function HeaderADM() {
 
-    // controla se o menu mobile está aberto ou fechado
   const [menuActive, setMenuActive] = useState(false);
-
-    // detecta se a página foi rolada mais de 50px para aplicar uma classe visual
   const [scrolled, setScrolled] = useState(false);
 
-    // alterna o estado do menu mobile entre aberto e fechado  
   const toggleMenu = () => setMenuActive(!menuActive);
 
-    // verifica se teve um scroll de mais de 50px   
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -31,7 +24,6 @@ function HeaderADM() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-    // 
   return (
     <header className={scrolled ? "scrolled" : ""}>
       <link
@@ -40,22 +32,27 @@ function HeaderADM() {
       />
 
       <nav className="nav-container">
-        <Link className="logo" to="/inicial">Lumière</Link>
+        
+        {/* AGORA o logo leva para a página inicial ADM */}
+        <Link className="logo" to="/inicialADM">Lumière</Link>
+
+        {/* LINKS DO ADMINISTRADOR SOMENTE */}
         <ul className="nav-links">
           <li><Link to="/inicialADM#obras">Obras</Link></li>
-          <li><Link to="/estantes">Estantes</Link></li>
-          <li><Link to="/cadastrarObras">Cadastrar obras</Link></li>
+          <li><Link to="/estantesADM">Estantes</Link></li>
+          <li><Link to="/cadastrarObrasADM">Cadastrar obras</Link></li>
           <li><Link to="/perfilADM">Perfil</Link></li>
         </ul>
 
-
-        {/* A classe active é adicionada se menuActive for true. */}
+        {/* Botão mobile */}
         <div className={`menu-mobile ${menuActive ? "active" : ""}`} onClick={toggleMenu}>
           <div className="hamburger-line"></div>
           <div className="hamburger-line"></div>
           <div className="hamburger-line"></div>
         </div>
       </nav>
+
+      {/* Menu mobile REALMENTE só com opções ADM */}
       <MobileNav active={menuActive} toggleMenu={toggleMenu} />
     </header>
   );

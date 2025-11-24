@@ -46,6 +46,7 @@ import PerfilADM from "./pagsAdministrador/PerfilADM.jsx";
 import EditarEstante from "./EditarEstante";
 import EstantesAdm from "./pagsAdministrador/EstantesAdm.jsx";
 import EditarEstanteAdm from "./pagsAdministrador/EditarEstanteAdm.jsx";
+import CadastrarObrasADM from "./pagsAdministrador/CadastrarObrasADM.jsx"
 
 
 import ProtectedRoute from "./ProtectedRoute";
@@ -120,6 +121,8 @@ function App() {
                                 <Route path="/editarobra/:id" element={<EditarObra />} />
                                 <Route path="/estantesadm" element={<EstantesAdm />} />
                                 <Route path="/editarestanteadm/:idEstante" element={<EditarEstanteAdm />} />
+                                <Route path="cadastrarobrasADM" element={<CadastrarObrasADM />} />
+
                         </Routes>
                 </BrowserRouter>
         );
