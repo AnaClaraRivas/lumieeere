@@ -16,7 +16,7 @@ import CardEscolheFilmeSerie from "./components/escolhe_av/CardEscolheFilmeSerie
 function ObrasDetalhes() {
   const { tipo } = useParams();
   const location = useLocation();
-  const dados = location.state; // dados enviados pelo Card
+  const dados = location.state; 
 
   if (!dados) {
     return (
