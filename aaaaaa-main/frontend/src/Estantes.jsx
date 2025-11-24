@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Estantes.css';
 import './App.css';
 
-function Estantes({ usuarioLogadoId }) { // <- Recebe o ID do usuário logado
+function Estantes({ usuarioLogadoId }) { 
   const [estantes, setEstantes] = useState([]);
   const navigate = useNavigate();
 
