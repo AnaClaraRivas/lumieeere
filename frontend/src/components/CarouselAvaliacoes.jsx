@@ -38,7 +38,7 @@ function CarouselAvaliacoes() {
                   <i
                     key={j}
                     className="fas fa-star"
-                    style={{ color: j < a.nota / 2 ? "#E6C74B" : "#ddd" }}
+                    style={{ color: j < a.nota / 1 ? "#E6C74B" : "#ddd" }}
                   ></i>
                 ))}
               </div>

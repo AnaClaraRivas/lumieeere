@@ -1,4 +1,4 @@
-.paginicial{
+.paginicial {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -9,29 +9,30 @@
     align-items: center;
 }
 
-.container{
+.container {
     padding-top: 100px;
 }
 
-h1, h3{
+h1,
+h3 {
     color: #001A38;
     font-weight: 700;
 }
 
-.titulo{
+.titulo {
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
 }
 
-.imginicial{
+.imginicial {
     width: 100%;
     float: inline-end;
 }
 
-.cardinicial{
+.cardinicial {
     background-color: #EFEFEF;
     border-radius: 40px;
     border: none;
@@ -39,12 +40,12 @@ h1, h3{
     align-items: center;
 }
 
-.divobrasinicial{
+.divobrasinicial {
     padding-top: 100px;
     padding-bottom: 100px;
 }
 
-.cardopicao{
+.cardopicao {
     background-color: #D9D9D9;
     border-radius: 30px;
     padding: 20px;
@@ -54,19 +55,19 @@ h1, h3{
     align-items: center;
 }
 
-.titulocard{
+.titulocard {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.imgcard{
+.imgcard {
     width: 90px;
     float: inline-start;
 }
 
-.btnavaliar{
+.btnavaliar {
     background-color: #001A38;
     color: #EDE7DB;
     text-decoration: none;
@@ -75,64 +76,69 @@ h1, h3{
     width: 200px;
 }
 
-.btnavaliar:hover{
+.btnavaliar:hover {
     background-color: #D9D9D9;
     color: #001A38;
     border: 1px solid #001A38;
     transition: 0.5s;
 }
 
-.col-6{
+.col-6 {
     width: 50%;
 }
 
 
 /*INICIAL ADM*/
-.botao_lixo{
+.botao_lixo {
     background-color: transparent;
     border: none;
+    color: #001A38;
 }
 
-.botao_lixo:hover{
-     background-color: #d4cfc3 !important;
-}
-
-.botao_lixo:active{
+.botao_lixo:hover {
     background-color: #d4cfc3 !important;
+    color: #001A38;
+
+}
+
+.botao_lixo:active {
+    background-color: #d4cfc3 !important;
+    color: #001A38;
+
 }
 
 
-.lixinho{
+.lixinho {
     color: #001A38;
     width: 100%;
 }
 
-.lixinho:hover{
+.lixinho:hover {
     background-color: #d4cfc3 !important;
 }
 
-.lixinho:active{
+.lixinho:active {
     background-color: #d4cfc3 !important;
 }
 
 
 @media (max-width: 768px) {
-    .titulo{
+    .titulo {
         padding-top: 30px;
         text-align: center;
     }
 
-    .imginicial{
+    .imginicial {
         float: none;
     }
 }
 
 @media (max-width: 375px) {
-    .col-6{
+    .col-6 {
         width: 100%;
     }
 
-    .imgcard{
+    .imgcard {
         float: none;
     }
 }
