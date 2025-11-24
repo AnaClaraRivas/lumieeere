@@ -19,7 +19,7 @@ function Rapida() {
   const [comentario, setComentario] = useState("");
   const [msg, setMsg] = useState("");
 
-  // Buscar dados obra
+  
   useEffect(() => {
     if (!idObra) {
       setMsg("Erro: ID da obra não encontrado na URL.");
@@ -41,7 +41,7 @@ function Rapida() {
       });
   }, [idObra]);
 
-  // Enviar Avaliação
+ 
   const enviarAvaliacao = async () => {
     if (!idUsuario) return setMsg("Erro: Usuário não encontrado.");
     if (!idObra) return setMsg("Erro: Obra não encontrada.");
