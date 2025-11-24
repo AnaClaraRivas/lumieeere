@@ -1,35 +1,27 @@
-// importa a biblioteca do react, faz funcionar os componentes e blablabla
 import React, {useState} from "react"; 
 import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// pega os componentes header e cardcontainer da pasta components
 import Header from "../components/Header";
 import CardContainer from "../components/CardContainer";
 import FilmeCardADM from "../componentsAdm/FilmeCardADM";
 import Footer from "../components/Footer";
 
-// importa o css
 import "../Cadastrar_Filmes.css";
 
 function AlterarFilme(){ 
 
-    //constante para pegar a imagem
     const [ImgObra, setImgObra] =useState(null);
-    //upload da img:
     const imagemtrocada = (event)=> {
-        const file = event.target.files[0] //quando a img é escolhida
+        const file = event.target.files[0]
             if(file){
-                //img temporaria 
-                const imgURL = URL.createObjectURL(file); //pra criar um link pra mostarr na tela, até entrar no banco
-                setImgObra(imgURL); //pra ver ne
+                const imgURL = URL.createObjectURL(file); 
+                setImgObra(imgURL); 
             }
     };
 
-    // estado que guarda a opção da classificação indicativa
     const [classificacaoSelecionada, setClassificacaoSelecionada] = useState(null);
 
-    // constante para lista av. indicativa
     const opcoes = [
         { valor: "L", cor: "#3CA63C" },
         { valor: "10", cor: "#1D74BB" },
@@ -67,7 +59,6 @@ function AlterarFilme(){
                 </section>
 
                 <section>
-                    {/* input escondido pra por a img lá em cima*/}
                     <input type="file"  id="upload-file" accept="image/*" style={{display: "none"}} onChange={imagemtrocada}/>
 
                     <div className="grid-container_tdr">
@@ -115,7 +106,6 @@ function AlterarFilme(){
                                 </div>
                             </div>
 
-                            {/* classificação indicativa */}
                             <div className="Class_Indic">
                                 <div className="Tit_Nome">
                                     <label className="Tit_Nome_Livro">Classificação Indicativa:</label>
