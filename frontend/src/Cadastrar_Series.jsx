@@ -205,7 +205,7 @@ function CadastrarObra() {
                             </select>
                         </div>
 
-                        <div className="mb-3">
+                        {/* <div className="mb-3">
                             <label className="form-label">Gênero</label>
                             <select
                                 className=" form-select formscss "
@@ -219,9 +219,9 @@ function CadastrarObra() {
                                 <option value="aventura">Aventura</option>
                                 <option value="comedia">Comédia</option>
                             </select>
-                        </div>
+                        </div> */}
 
-                        {tipoObra !== "Livro" && (
+                        {/* {tipoObra !== "Livro" && (
                             <div className="mb-3">
                                 <label className="form-label">Classificação Indicativa</label>
                                 <div className="d-flex gap-2 flex-wrap">
@@ -241,7 +241,7 @@ function CadastrarObra() {
                                     ))}
                                 </div>
                             </div>
-                        )}
+                        )} */}
                     </div>
                 </div>
 

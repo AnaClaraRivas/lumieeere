@@ -71,11 +71,11 @@ function ObrasLivros() {
             </div>
           </div>
 
-          <div className="filtros-container">
+          {/* <div className="filtros-container">
             <select className="filtro-select"><option>Filtro 1</option></select>
             <select className="filtro-select"><option>Filtro 2</option></select>
             <select className="filtro-select"><option>Filtro 3</option></select>
-          </div>
+          </div> */}
 
           {obrasFiltradas.map((obra) => (
             <LivroCard

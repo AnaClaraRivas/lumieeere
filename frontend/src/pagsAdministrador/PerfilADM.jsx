@@ -56,7 +56,6 @@ export default function PerfilADM() {
 
             <InfoPerfil
               nome={usuarioBanco.nome}
-              avaliacoes={13}
               dataEntrada={usuarioBanco.data_cadastro}
             />
           </div>

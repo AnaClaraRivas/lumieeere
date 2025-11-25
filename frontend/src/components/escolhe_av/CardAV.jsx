@@ -25,7 +25,7 @@ function CardAV({ tipo, dados }) {
                     </div>
                 </div>
 
-                <div className="container_av_rapida">
+                {/* <div className="container_av_rapida">
                     <div className="col card_escolhe">
                         <h5 className="titulo_card_escolha">Quero fazer uma avaliação detalhada!</h5>
 
@@ -45,7 +45,7 @@ function CardAV({ tipo, dados }) {
                         <ul>📽️Diga que emoção você sentiu;</ul>
                         <ul>📽️Avalie diferentes critérios;</ul>
                     </div>
-                </div>
+                </div> */}
             </div>
 
         </div>
